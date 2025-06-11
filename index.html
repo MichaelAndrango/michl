@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ey compa 😎</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(circle, #d1f0ff, #81d4fa);
+      font-family: 'Segoe UI', sans-serif;
+      overflow: hidden;
+    }
+
+    .contenedor {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      color: #222;
+    }
+
+    .titulo {
+      font-size: 2em;
+      margin-bottom: 30px;
+    }
+
+    .boton {
+      background: #2196f3;
+      color: white;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+    }
+
+    .boton:hover {
+      background: #1976d2;
+    }
+
+    .respuesta {
+      display: none;
+      margin-top: 40px;
+      font-size: 1.5em;
+      animation: aparecer 1s ease-out forwards;
+    }
+
+    @keyframes aparecer {
+      0% { opacity: 0; transform: scale(0.8); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    .emoji {
+      font-size: 4em;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contenedor">
+    <div class="titulo">Ey bro... 😏</div>
+    <button class="boton" onclick="mostrarRespuesta()">Oye, pásame la tarea 😂</button>
+    <div id="respuesta" class="respuesta">
+      ¡JAJA! Primero invítame un café, mínimo 😎<br>
+      <div class="emoji">☕📚</div>
+    </div>
+  </div>
+
+  <script>
+    function mostrarRespuesta() {
+      document.getElementById("respuesta").style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
